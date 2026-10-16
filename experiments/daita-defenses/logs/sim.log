@@ -1,0 +1,52 @@
+[2026-10-16T08:11:07Z INFO  maybenot::tweak::sim] simulation configuration: SimConfig {
+        base_dataset: "/Users/ehsanarab/Downloads/vpn/data/bigenough-95x10x20-standard-rngsubpages/",
+        network: NetworkConfig {
+            rtt_in_ms: 50..=500,
+            packets_per_sec: Some(
+                100000..=1001000,
+            ),
+        },
+        trace_length: 60000,
+        events_multiplier: 100,
+        seed: Some(
+            "0",
+        ),
+        tunable_defense_limits: None,
+        client: Some(
+            Limits {
+                padding_budget: Some(
+                    1000.0..=2000.0,
+                ),
+                blocking_budget: None,
+                padding_frac: Some(
+                    0.95..=0.95,
+                ),
+                blocking_frac: None,
+            },
+        ),
+        server: Some(
+            Limits {
+                padding_budget: Some(
+                    1000.0..=3000.0,
+                ),
+                blocking_budget: None,
+                padding_frac: Some(
+                    0.95..=0.95,
+                ),
+                blocking_frac: None,
+            },
+        ),
+        augmentation: None,
+        max_samples: None,
+        integration: None,
+        stop_after_all_normal_packets_processed: None,
+    }
+[2026-10-16T08:11:07Z INFO  maybenot::tweak::sim] deterministic, using seed 0
+[2026-10-16T08:11:08Z INFO  maybenot::tweak::sim] read 19000 defenses from def-100-h2-19k
+[2026-10-16T08:11:08Z INFO  maybenot::tweak::sim] reading base dataset from /Users/ehsanarab/Downloads/vpn/data/bigenough-95x10x20-standard-rngsubpages/
+[2026-10-16T08:11:08Z INFO  maybenot::tweak::sim] read 19000 traces
+[2026-10-16T08:11:08Z INFO  maybenot::tweak::sim] enough defenses to cover dataset
+[2026-10-16T08:11:08Z INFO  maybenot::tweak::sim] not using tunable defense limits
+[2026-10-16T08:11:08Z INFO  maybenot::tweak::sim] simulating...
+[2026-10-16T08:12:14Z INFO  maybenot::tweak::sim] done, wrote 19000 traces to sim-baseline
+./maybenot sim -c baseline.toml -i def-100-h2-19k -o sim-baseline  598.00s user 10.37s system 904% cpu 1:07.25 total

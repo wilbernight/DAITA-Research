@@ -1,0 +1,44 @@
+[2026-10-16T16:06:14Z INFO  maybenot::tweak::eval] found 19000 defended traces in input directory sim-blocking
+[2026-10-16T16:06:14Z INFO  maybenot::tweak::eval] found 19000 base traces in base directory /Users/ehsanarab/Downloads/vpn/data/bigenough-95x10x20-standard-rngsubpages/
+[2026-10-16T16:06:14Z INFO  maybenot::tweak::eval] analyzing defended traces...
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] Metric                       Mean   StdDev   Median    Unit
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] ===========================================================
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] base 🌐              	    4244     3221     3369 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -sent               	     353      293      286 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -recv               	    3892     3005     3051 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] defended 🛡️         	   26951    23134    16332 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -sent               	    3780     4200     2004 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -recv               	   23171    20932    12464 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] missing ⚠️          	      56      516        0 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -sent               	       5       50        0 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -recv               	      51      480        0 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] total padding 📦     	   22762    21859    13202 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -sent               	    3432     4053     1817 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -recv               	   19330    19904     9462 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] tail padding 🔚      	   21262    21403    11955 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -sent               	    3153     3966     1634 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -recv               	   18109    19507     8498 packets 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] durations ⏱️
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] base                	      28       18       26 seconds 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] defended            	    3222     5542     1008 seconds 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -last normal        	      30       19       27 seconds 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] overheads (last normal) 💸
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] data                	    0.67     1.43     0.37 multiple
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -sent               	    1.23     1.96     0.80 multiple
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] -recv               	    0.62     1.50     0.32 multiple
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] duration            	    0.06     0.20     0.02 multiple
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] 
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] running classifiers on defended traces...
+[2026-10-16T16:06:21Z INFO  maybenot::tweak::eval] running classifier: /Users/ehsanarab/Downloads/vpn/.venv/bin/python /Users/ehsanarab/Downloads/vpn/work/scripts/rf.py --train -c 95 -s 20 -f 1 -d
+[2026-10-16T16:19:19Z INFO  maybenot::tweak::eval] result: 0.6511
+[2026-10-16T16:19:19Z INFO  maybenot::tweak::eval] running classifier: /Users/ehsanarab/Downloads/vpn/.venv/bin/python /Users/ehsanarab/Downloads/vpn/work/scripts/df.py --train -c 95 -s 20 -f 1 -d
+[2026-10-16T16:26:46Z INFO  maybenot::tweak::eval] result: 0.5413
+[2026-10-16T16:26:46Z INFO  maybenot::tweak::eval] created new output file results-blocking-f1.json
+./maybenot eval -c f1-$n.toml -i sim-$n  298.41s user 22.43s system 26% cpu 20:32.13 total

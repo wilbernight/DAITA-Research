@@ -1,0 +1,127 @@
+10:17:38 using deterministic seed 0
+10:17:38 starting to load dataset from ../data/bigenough-95x10x20-standard-rngsubpages (default DF), 5k packets/trace)
+10:17:38 using subpages
+10:17:42 loaded 19000 items in dataset with 19000 labels
+default DF, just direction of packets
+10:17:42 split 15200 training and 3800 testing
+10:17:42 using mps
+10:17:42 starting training with 30 epochs and patience 10
+10:17:43 epoch 0
+	training loss 3.9470
+	training accuracy 0.1017
+10:18:03 epoch 1
+	training loss 3.1586
+	training accuracy 0.2573
+10:18:17 epoch 2
+	training loss 2.7071
+	training accuracy 0.3619
+10:18:31 epoch 3
+	training loss 2.3691
+	training accuracy 0.4384
+10:18:46 epoch 4
+	training loss 2.0885
+	training accuracy 0.5029
+10:19:00 epoch 5
+	training loss 1.8312
+	training accuracy 0.5625
+10:19:14 epoch 6
+	training loss 1.5972
+	training accuracy 0.6157
+10:19:29 epoch 7
+	training loss 1.4243
+	training accuracy 0.6528
+10:19:43 epoch 8
+	training loss 1.2856
+	training accuracy 0.6870
+10:19:57 epoch 9
+	training loss 1.1156
+	training accuracy 0.7298
+10:20:12 epoch 10
+	training loss 1.0015
+	training accuracy 0.7553
+10:20:26 epoch 11
+	training loss 0.8956
+	training accuracy 0.7814
+10:20:40 epoch 12
+	training loss 0.8052
+	training accuracy 0.8020
+10:20:55 epoch 13
+	training loss 0.7211
+	training accuracy 0.8220
+10:21:09 epoch 14
+	training loss 0.6532
+	training accuracy 0.8368
+10:21:23 epoch 15
+	training loss 0.5847
+	training accuracy 0.8564
+10:21:37 epoch 16
+	training loss 0.5338
+	training accuracy 0.8639
+10:21:52 epoch 17
+	training loss 0.4919
+	training accuracy 0.8724
+10:22:06 epoch 18
+	training loss 0.4486
+	training accuracy 0.8869
+10:22:20 epoch 19
+	training loss 0.4205
+	training accuracy 0.8947
+10:22:34 epoch 20
+	training loss 0.3724
+	training accuracy 0.9054
+10:22:49 epoch 21
+	training loss 0.3597
+	training accuracy 0.9087
+10:23:03 epoch 22
+	training loss 0.3249
+	training accuracy 0.9157
+10:23:17 epoch 23
+	training loss 0.3113
+	training accuracy 0.9178
+10:23:31 epoch 24
+	training loss 0.2768
+	training accuracy 0.9289
+10:23:46 epoch 25
+	training loss 0.2641
+	training accuracy 0.9297
+10:24:00 epoch 26
+	training loss 0.2463
+	training accuracy 0.9339
+10:24:14 epoch 27
+	training loss 0.2346
+	training accuracy 0.9385
+10:24:29 epoch 28
+	training loss 0.2323
+	training accuracy 0.9359
+10:24:43 epoch 29
+	training loss 0.2059
+	training accuracy 0.9436
+10:24:58 made 3800 predictions with 3800 labels
+	threshold  0.0, accuracy 0.93   [tp  3526, fp   274, fn     0]
+		 0  0.95,   1 0.975,   2 0.975,   3 0.975,   4 0.975,   5  0.85,   6 0.975,   7  0.95,   8 0.925,   9   0.8,  
+		10   0.9,  11  0.95,  12  0.95,  13  0.85,  14 0.925,  15   0.9,  16  0.95,  17 0.925,  18   1.0,  19   1.0,  
+		20   1.0,  21   1.0,  22   0.9,  23 0.925,  24 0.775,  25  0.95,  26 0.975,  27  0.95,  28  0.95,  29  0.95,  
+		30 0.925,  31   0.9,  32 0.975,  33   1.0,  34  0.75,  35   1.0,  36   0.9,  37 0.825,  38 0.975,  39   0.9,  
+		40  0.95,  41  0.95,  42 0.825,  43 0.975,  44  0.95,  45 0.925,  46 0.875,  47 0.825,  48 0.925,  49  0.95,  
+		50  0.95,  51  0.95,  52   0.9,  53 0.875,  54   0.9,  55  0.95,  56   1.0,  57  0.95,  58 0.975,  59   0.9,  
+		60   0.8,  61   0.9,  62 0.925,  63   0.9,  64 0.925,  65   0.9,  66  0.95,  67   0.9,  68 0.975,  69 0.875,  
+		70   1.0,  71 0.975,  72  0.95,  73  0.95,  74  0.95,  75   1.0,  76  0.95,  77   0.8,  78  0.95,  79 0.975,  
+		80 0.975,  81   0.9,  82  0.85,  83 0.925,  84  0.95,  85   0.9,  86   1.0,  87 0.975,  88 0.925,  89  0.95,  
+		90   0.9,  91   0.9,  92 0.875,  93  0.95,  94   0.9,  
+	threshold 0.11, accuracy 0.93   [tp  3526, fp   273, fn     1]
+	threshold 0.35, accuracy 0.93   [tp  3515, fp   211, fn    74]
+	threshold 0.53, accuracy 0.91   [tp  3463, fp   132, fn   205]
+	threshold 0.66, accuracy  0.9   [tp  3411, fp    88, fn   301]
+	threshold 0.75, accuracy 0.88   [tp  3342, fp    63, fn   395]
+	threshold 0.82, accuracy 0.86   [tp  3282, fp    45, fn   473]
+	threshold 0.87, accuracy 0.84   [tp  3206, fp    34, fn   560]
+	threshold 0.91, accuracy 0.83   [tp  3150, fp    27, fn   623]
+	threshold 0.93, accuracy 0.82   [tp  3109, fp    22, fn   669]
+	threshold 0.95, accuracy  0.8   [tp  3053, fp    14, fn   733]
+	threshold 0.96, accuracy 0.78   [tp  2970, fp    10, fn   820]
+	threshold 0.97, accuracy 0.76   [tp  2892, fp     7, fn   901]
+	threshold 0.98, accuracy 0.74   [tp  2799, fp     5, fn   996]
+	threshold 0.99, accuracy 0.71   [tp  2711, fp     4, fn  1085]
+	threshold 0.99, accuracy 0.69   [tp  2622, fp     4, fn  1174]
+0.9279
+../.venv/bin/python scripts/df.py --train -c 95 -s 20 --seed 0 -d   44.59s user 5.50s system 11% cpu 7:22.24 total

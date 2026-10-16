@@ -1,0 +1,48 @@
+[2026-10-16T15:03:11Z INFO  maybenot::tweak::eval] found 19000 defended traces in input directory sim-blockheavy
+[2026-10-16T15:03:11Z INFO  maybenot::tweak::eval] found 19000 base traces in base directory /Users/ehsanarab/Downloads/vpn/data/bigenough-95x10x20-standard-rngsubpages/
+[2026-10-16T15:03:11Z INFO  maybenot::tweak::eval] analyzing defended traces...
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] Metric                       Mean   StdDev   Median    Unit
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] ===========================================================
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] base 🌐              	    4244     3221     3369 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -sent               	     353      293      286 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -recv               	    3892     3005     3051 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] defended 🛡️         	   27763    22449    18601 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -sent               	    4633     4359     3442 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -recv               	   23130    19855    13780 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] missing ⚠️          	      56      516        0 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -sent               	       5       50        0 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -recv               	      51      480        0 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] total padding 📦     	   23574    21100    15047 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -sent               	    4285     4196     3272 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -recv               	   19289    18768    10488 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] tail padding 🔚      	   21480    20582    13362 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -sent               	    3900     4081     3002 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -recv               	   17580    18345     9215 packets 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] durations ⏱️
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] base                	      28       18       26 seconds 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] defended            	    7930    41612     1174 seconds 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -last normal        	      30       19       27 seconds 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] overheads (last normal) 💸
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] data                	    0.89     1.80     0.53 multiple
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -sent               	    1.64     2.28     1.13 multiple
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] -recv               	    0.83     1.96     0.46 multiple
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] duration            	    0.06     0.20     0.02 multiple
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] 
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] running classifiers on defended traces...
+[2026-10-16T15:03:18Z INFO  maybenot::tweak::eval] running classifier: /Users/ehsanarab/Downloads/vpn/.venv/bin/python /Users/ehsanarab/Downloads/vpn/work/scripts/rf.py --train -c 95 -s 20 -f 0 -d
+[2026-10-16T15:16:27Z INFO  maybenot::tweak::eval] result: 0.6268
+[2026-10-16T15:16:27Z INFO  maybenot::tweak::eval] running classifier: /Users/ehsanarab/Downloads/vpn/.venv/bin/python /Users/ehsanarab/Downloads/vpn/work/scripts/df.py --train -c 95 -s 20 -f 0 -d
+[2026-10-16T15:23:53Z INFO  maybenot::tweak::eval] result: 0.4921
+[2026-10-16T15:23:53Z INFO  maybenot::tweak::eval] running classifier: /Users/ehsanarab/Downloads/vpn/.venv/bin/python /Users/ehsanarab/Downloads/vpn/work/scripts/rf.py --train -c 95 -s 20 -f 1 -d
+[2026-10-16T15:37:03Z INFO  maybenot::tweak::eval] result: 0.6153
+[2026-10-16T15:37:03Z INFO  maybenot::tweak::eval] running classifier: /Users/ehsanarab/Downloads/vpn/.venv/bin/python /Users/ehsanarab/Downloads/vpn/work/scripts/df.py --train -c 95 -s 20 -f 1 -d
+[2026-10-16T15:44:29Z INFO  maybenot::tweak::eval] result: 0.495
+[2026-10-16T15:44:29Z INFO  maybenot::tweak::eval] created new output file results-blockheavy.json
+./maybenot eval -c $c -i sim-$n  563.78s user 44.33s system 24% cpu 41:17.82 total
