@@ -1,0 +1,31 @@
+[package]
+name = "daita-relay"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-only"
+description = "Relay-side ephemeral peer service (PQ PSK + DAITA v2) for a gotatun WireGuard interface"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+hex = "0.4"
+log = "0.4"
+env_logger = "0.11"
+maybenot = "2.2"
+ml-kem = { version = "0.2.1", features = ["zeroize"] }
+pqcrypto-hqc = { version = "0.2.1", default-features = false }
+pqcrypto-traits = "0.3.5"
+prost = "0.14.3"
+rand = "0.8"
+rand_core = { version = "0.6", features = ["getrandom"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tokio = { version = "1.44", features = ["macros", "rt-multi-thread", "net", "time", "sync", "io-util", "signal"] }
+tonic = "0.14.6"
+tonic-prost = "0.14.6"
+zeroize = "1"
+
+[build-dependencies]
+protox = "0.9"
+tonic-prost-build = { version = "0.14.6", default-features = false, features = ["transport"] }
