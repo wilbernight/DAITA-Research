@@ -37,7 +37,7 @@ async fn main() -> Result<()> {
     let args = Args::parse();
 
     let releases = Arc::new(defenses::Releases::load_dir(&args.defenses)?);
-    let peers = Arc::new(peers::Peers::new(uapi::Uapi::new(&args.uapi_socket)));
+    let peers = Arc::new(peers::Peers::new(uapi::Uapi::new(&args.uapi_socket), args.listen.port()));
 
     let poller = peers.clone();
     let poll = Duration::from_millis(args.poll_ms);

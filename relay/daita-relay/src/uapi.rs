@@ -16,6 +16,10 @@ pub struct PeerInfo {
     pub allowed_ips: Vec<String>,
     /// (seconds, nanoseconds) since the epoch; (0, 0) if the peer never completed a handshake.
     pub last_handshake: (u64, u64),
+    /// Total inbound bytes. Used to tell a silent (dead) ephemeral session from
+    /// a live one: keepalives arrive every 25s, so frozen bytes mean nobody is
+    /// there anymore.
+    pub rx_bytes: u64,
 }
 
 pub struct DaitaPeerSettings<'a> {
@@ -105,6 +109,7 @@ pub fn parse_get(reply: &str) -> Result<Vec<PeerInfo>> {
                     "allowed_ip" => peer.allowed_ips.push(value.to_string()),
                     "last_handshake_time_sec" => peer.last_handshake.0 = value.parse()?,
                     "last_handshake_time_nsec" => peer.last_handshake.1 = value.parse()?,
+                    "rx_bytes" => peer.rx_bytes = value.parse()?,
                     _ => {}
                 }
             }
@@ -161,13 +166,15 @@ mod tests {
     fn parses_get_reply() {
         let reply = "private_key=aa\nlisten_port=51820\npublic_key=01\npreshared_key=00\n\
             allowed_ip=10.64.0.2/32\nallowed_ip=fc00::2/128\nlast_handshake_time_sec=17\n\
-            last_handshake_time_nsec=5\npublic_key=02\nlast_handshake_time_sec=0\n\
-            last_handshake_time_nsec=0\nerrno=0\n\n";
+            last_handshake_time_nsec=5\nrx_bytes=1234\npublic_key=02\nlast_handshake_time_sec=0\n\
+            last_handshake_time_nsec=0\nrx_bytes=0\nerrno=0\n\n";
         let peers = parse_get(reply).unwrap();
         assert_eq!(peers.len(), 2);
         assert_eq!(peers[0].allowed_ips, ["10.64.0.2/32", "fc00::2/128"]);
         assert_eq!(peers[0].last_handshake, (17, 5));
+        assert_eq!(peers[0].rx_bytes, 1234);
         assert!(peers[1].allowed_ips.is_empty());
+        assert_eq!(peers[1].rx_bytes, 0);
     }
 
     #[test]
